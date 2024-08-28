@@ -2,7 +2,7 @@
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1724805067661/67f02611-e0ff-4ea0-beaf-0f7d9e7fde39.jpeg)
 
-### [Permalink](#heading-00-introduction "Permalink")00 Introduction
+### [](#heading-00-introduction "")00 Introduction
 
 Why Nestjs
 
@@ -12,7 +12,7 @@ Why Nestjs
 *   NestJS with Integrations
 *   Nestjs why should i choose it !
 
-### [Permalink](#heading-controller-and-services-building-blocks "Permalink")controller and services (building blocks)
+### [](#heading-controller-and-services-building-blocks "")controller and services (building blocks)
 
 *   Installing Node.js and Yarn
 *   Installing the NestJS CLI
@@ -29,14 +29,14 @@ Why Nestjs
 *   CRUD APIs
 *   Feature Searching and Filtering
 
-### [Permalink](#heading-02-validation-and-pipes-building-blocks "Permalink")02 validation and pipes (building blocks)
+### [](#heading-02-validation-and-pipes-building-blocks "")02 validation and pipes (building blocks)
 
 *   ValidationPipe Creating a Task
 *   Error Handling Deleting a non-existing Task-
 *   Validation Update Task Status
 *   Challenge Validating Task Filtering and Search
 
-### [Permalink](#heading-03-exception-filters-and-middleware-all-building-blocks "Permalink")03 exception filters and middleware (all building blocks)
+### [](#heading-03-exception-filters-and-middleware-all-building-blocks "")03 exception filters and middleware (all building blocks)
 
 *   Controllers with task api
 *   Providers with task crud apis
@@ -52,7 +52,7 @@ Why Nestjs
 *   exclude routes from middleware
 *   Validating Task Filtering and Search
 
-### [Permalink](#heading-04-apply-all-learning-in-demo "Permalink")04 Apply all Learning in Demo
+### [](#heading-04-apply-all-learning-in-demo "")04 Apply all Learning in Demo
 
 *   Create students apis
 *   Use IN-memory database
@@ -73,7 +73,7 @@ Why Nestjs
 *   Understanding DI Framework
 *   Understand IOC Container
 
-### [Permalink](#heading-05-data-store-with-orm "Permalink")05 Data store with ORM
+### [](#heading-05-data-store-with-orm "")05 Data store with ORM
 
 - Introduction to Persistence 
 - Installing Docker and pgAdmin
@@ -88,7 +88,7 @@ Why Nestjs
 - Persistence Deleting a Task Persistence Update Task Status 
 - Small Change Needed Persistence Getting All Tasks
 
-### [Permalink](#heading-06-different-orm-and-migrations "Permalink")06 Different ORM and Migrations
+### [](#heading-06-different-orm-and-migrations "")06 Different ORM and Migrations
 
 *   Food Delivery APIs with different ORM
 *   Prisma
@@ -96,11 +96,11 @@ Why Nestjs
 *   Mongoose
 *   TypeORM
 
-### [Permalink](#heading-07-data-store-with-prismamongoosesequelize "Permalink")07 Data store with Prisma/Mongoose/Sequelize
+### [](#heading-07-data-store-with-prismamongoosesequelize "")07 Data store with Prisma/Mongoose/Sequelize
 
 Food Delivery APIs with Prisma Prisma and Migration Creating Prism Models Building APIs with Prisma Building Controller and services Building Prisma schema with postgres Building APIs with Prisma client apis
 
-### [Permalink](#heading-08-intro-to-authentication-and-authorization "Permalink")08 Intro to Authentication and Authorization
+### [](#heading-08-intro-to-authentication-and-authorization "")08 Intro to Authentication and Authorization
 
 *   Cookies based auth
 *   session based auth
@@ -118,7 +118,7 @@ Food Delivery APIs with Prisma Prisma and Migration Creating Prism Models Buildi
 - Implementing JWT Validation Custom 
 - Decorator Guarding the Tasks Routes
 
-### [Permalink](#heading-09-database-relationship "Permalink")09 Database relationship
+### [](#heading-09-database-relationship "")09 Database relationship
 
 *   Food Delivery APIs with TypeORM
 *   Managing relationship in tables

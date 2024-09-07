@@ -1,0 +1,10 @@
+# Custom
+/build/**
+/coverage/**
+/formio*
+/insomnia/**
+/infra/cdk.out/**
+node_modules/**
+package-lock.json
+package.json
+tmp

@@ -1,85 +1,129 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1724805067661/67f02611-e0ff-4ea0-beaf-0f7d9e7fde39.jpeg)
 
-## Description
+### [](#heading-00-introduction "")00 Introduction
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Why Nestjs
 
-## Project setup
+*   nestjs and express side by side
+*   nestjs IOC and Typescript
+*   Nestjs decorators
+*   NestJS with Integrations
+*   Nestjs why should i choose it !
 
-```bash
-$ npm install
-```
+### [](#heading-controller-and-services-building-blocks "")controller and services (building blocks)
 
-## Compile and run the project
+*   Installing Node.js and Yarn
+*   Installing the NestJS CLI
+*   (Optional) Installing VSCode and Extensions
+*   Creating our project via the NestJS CLI
+*   Creating a Tasks Module
+*   Creating at Tasks Controller
+*   Creating a Tasks Service
+*   Defining a Task Model
+*   Feature Creating a Task (Part - Controller)
+*   Feature Creating a Task (Part - Service)
+*   Implementing CreateTaskDto
+*   Feature Getting a Task by ID
+*   CRUD APIs
+*   Feature Searching and Filtering
 
-```bash
-# development
-$ npm run start
+### [](#heading-02-validation-and-pipes-building-blocks "")02 validation and pipes (building blocks)
 
-# watch mode
-$ npm run start:dev
+*   ValidationPipe Creating a Task
+*   Error Handling Deleting a non-existing Task-
+*   Validation Update Task Status
+*   Challenge Validating Task Filtering and Search
 
-# production mode
-$ npm run start:prod
-```
+### [](#heading-03-exception-filters-and-middleware-all-building-blocks "")03 exception filters and middleware (all building blocks)
 
-## Run tests
+*   Controllers with task api
+*   Providers with task crud apis
+*   Modules with task crud apis
+*   Middleware with task crud apis
+*   Exception filters with task crud apis
+*   Pipes with task crud apis
+*   Guards with task crud apis
+*   Interceptors with task crud apis
+*   Custom decorators with task crud apis
+*   create middleware with task crud apis
+*   apply middleware on routes
+*   exclude routes from middleware
+*   Validating Task Filtering and Search
 
-```bash
-# unit tests
-$ npm run test
+### [](#heading-04-apply-all-learning-in-demo "")04 Apply all Learning in Demo
 
-# e2e tests
-$ npm run test:e2e
+*   Create students apis
+*   Use IN-memory database
+*   CRUD APIs with swagger specs
+*   Payload validation using DTO Validation
+*   Apply Middleware on Private Routes
+*   Create a Mock Login APIs with Token in Auth Header
+*   Apply Guards on Private Route
+*   Add exception Filter on Response Payload
+*   Custom payload data validation using class validator
+*   Adding services and dao layer
+*   How to import export and share modules
+*   Code structure of any basic nestjs application
+*   Creating routing using controllers
+*   Using swagger tags to exose api specs
+*   Using REST API client to test apis
+*   Creating Modules and share Modules
+*   Understanding DI Framework
+*   Understand IOC Container
 
-# test coverage
-$ npm run test:cov
-```
+### [](#heading-05-data-store-with-orm "")05 Data store with ORM
 
-## Resources
+- Introduction to Persistence 
+- Installing Docker and pgAdmin
+- Running PostgreSQL via Docker
+- Setting up pgAdmin
+- Creating a Database using pgAdmin 
+- Introduction to TypeORM Setting up a Database Connection
+- Creating a Task Entity Active Record VS Data Mapper Patterns
+- Creaing a Tasks Repository Refactoring for Tasks Service 
+- Persistence Getting a Task by ID Persistence
+- Creating a Task (Challenge) Persistence Deleting a Task (Solution)
+- Persistence Deleting a Task Persistence Update Task Status 
+- Small Change Needed Persistence Getting All Tasks
 
-Check out a few resources that may come in handy when working with NestJS:
+### [](#heading-06-different-orm-and-migrations "")06 Different ORM and Migrations
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+*   Food Delivery APIs with different ORM
+*   Prisma
+*   Sequelize
+*   Mongoose
+*   TypeORM
 
-## Support
+### [](#heading-07-data-store-with-prismamongoosesequelize "")07 Data store with Prisma/Mongoose/Sequelize
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Food Delivery APIs with Prisma Prisma and Migration Creating Prism Models Building APIs with Prisma Building Controller and services Building Prisma schema with postgres Building APIs with Prisma client apis
 
-## Stay in touch
+### [](#heading-08-intro-to-authentication-and-authorization "")08 Intro to Authentication and Authorization
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+*   Cookies based auth
+*   session based auth
+*   jwt token based auth
 
-## License
+- Setting up AuthModule,
+- User Entity and User Repository Feature 
+- Signing Up Validation 
+- Credentials and Password Strength 
+- Error Handling Username Conflicts 
+- Securely Storing Passwords Password 
+- Hashing With Bcrypt Feature Signing In 
+- Setting up the JWT Module and Passport.js 
+- Signing a JWT Token on Sign In (Authentication) 
+- Implementing JWT Validation Custom 
+- Decorator Guarding the Tasks Routes
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### [](#heading-09-database-relationship "")09 Database relationship
+
+*   Food Delivery APIs with TypeORM
+*   Managing relationship in tables
+*   define relationships in typeorm entities
+*   build apis using typeorm
+*   add auth and authz created in above videos
+*   add middeleare and auth guards
+*   add filters and interceptors

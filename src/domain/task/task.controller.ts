@@ -3,7 +3,7 @@ import { TaskService } from "./task.service";
 
 @Controller("/api/v1/tasks")
 export class TaskController {
-  constructor(private readonly taskService: TaskService) { }
+  constructor(private readonly taskService: TaskService) {}
 
   @Get("")
   getHello(): string {

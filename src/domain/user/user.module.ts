@@ -3,11 +3,10 @@ import { TaskModule } from "../task/task.module";
 import { UserService } from "./user.service";
 import { UserController } from "./user.controller";
 
-
 @Module({
   imports: [TaskModule],
   controllers: [UserController],
   providers: [UserService],
-  exports: []
+  exports: [],
 })
-export class UserModule { }
+export class UserModule {}

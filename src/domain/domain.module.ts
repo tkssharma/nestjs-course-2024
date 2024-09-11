@@ -7,4 +7,4 @@ import { UserModule } from "./user/user.module";
   controllers: [],
   providers: [],
 })
-export class DomainModule { }
+export class DomainModule {}

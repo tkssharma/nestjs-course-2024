@@ -6,13 +6,9 @@ import {
   HttpCode,
   HttpStatus,
   Param,
-  ParseIntPipe,
-  ParseUUIDPipe,
   Post,
   Put,
-  UseFilters,
   UseGuards,
-  UseInterceptors,
   UsePipes,
   ValidationPipe,
 } from "@nestjs/common";
@@ -28,13 +24,10 @@ import {
   ApiInternalServerErrorResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
-  ApiOperation,
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from "@nestjs/swagger";
 import { NO_ENTITY_FOUND, INTERNAL_SERVER_ERROR } from "../../app.constants";
-import { HttpExceptionFilter } from "src/core/filters/exception.filter";
-import { TaskInterceptor } from "src/core/interceptor/simple.interceptor";
 
 // swagger tags
 

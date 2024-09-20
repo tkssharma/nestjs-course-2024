@@ -10,7 +10,6 @@ export class AuthGuard implements CanActivate {
     // i have request now
     // check user role set by middleware here
     const roles = request.user.roles;
-    console.log(roles);
     // console.log("assigned role" + roles.join(","));
     if (roles.includes("admin")) {
       return true;

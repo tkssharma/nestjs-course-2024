@@ -3,7 +3,6 @@ import {
   NestInterceptor,
   Injectable,
   ExecutionContext,
-  BadRequestException,
 } from "@nestjs/common";
 import { Observable } from "rxjs";
 import { tap } from "rxjs/operators";
@@ -20,8 +19,6 @@ export class TaskInterceptor implements NestInterceptor {
       age: number;
     };
     requestBody.name = requestBody.name.toUpperCase();
-    return next
-      .handle()
-      .pipe(tap(() => console.log("response from the method handler")));
+    return next.handle().pipe(tap(() => {}));
   }
 }

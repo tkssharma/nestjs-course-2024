@@ -1,13 +1,11 @@
 import {
-  HttpException,
-  HttpStatus,
   Injectable,
   NestMiddleware,
   UnauthorizedException,
 } from "@nestjs/common";
 import { Response, NextFunction } from "express";
 import { RequestModel } from "../interfaces/user";
-import { UserConflictException } from "../exceptions/user.conflict.exception";
+// import { UserConflictException } from "../exceptions/user.conflict.exception";
 
 @Injectable()
 export class AuthMiddleware implements NestMiddleware {

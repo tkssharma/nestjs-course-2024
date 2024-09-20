@@ -1,11 +1,11 @@
-import { Request } from "express"
+import { Request } from "express";
 
 export interface UserMetadata {
-  permissions: string[],
-  roles: string[],
-  email: string
+  permissions: string[];
+  roles: string[];
+  email: string;
 }
 
 export interface RequestModel extends Request {
-  user: UserMetadata
+  user: UserMetadata;
 }

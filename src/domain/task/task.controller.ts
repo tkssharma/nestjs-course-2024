@@ -1,23 +1,88 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Put, UseGuards } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Param,
+  ParseIntPipe,
+  ParseUUIDPipe,
+  Post,
+  Put,
+  UseFilters,
+  UseGuards,
+  UseInterceptors,
+  UsePipes,
+  ValidationPipe,
+} from "@nestjs/common";
 import { TaskService } from "./task.service";
 import { Task } from "./task.model";
-import { CreateTaskDto } from "./task.dto";
+import { CreateTaskDto, listResponseDto, TaskByIdDto } from "./task.dto";
 import { AuthGuard } from "src/core/guards/auth.guard";
+import {
+  ApiBearerAuth,
+  ApiConsumes,
+  ApiCreatedResponse,
+  ApiForbiddenResponse,
+  ApiInternalServerErrorResponse,
+  ApiNotFoundResponse,
+  ApiOkResponse,
+  ApiOperation,
+  ApiTags,
+  ApiUnprocessableEntityResponse,
+} from "@nestjs/swagger";
+import { NO_ENTITY_FOUND, INTERNAL_SERVER_ERROR } from "../../app.constants";
+import { HttpExceptionFilter } from "src/core/filters/exception.filter";
+import { TaskInterceptor } from "src/core/interceptor/simple.interceptor";
 
+// swagger tags
+
+@ApiBearerAuth("authorization")
+// @UseInterceptors(new TaskInterceptor())
+@ApiTags("tasks apis ")
+@UsePipes(
+  new ValidationPipe({
+    whitelist: true,
+    transform: true,
+    transformOptions: {
+      enableImplicitConversion: true,
+    },
+  })
+)
 @Controller("/api/v1/tasks")
 export class TaskController {
-  constructor(private readonly taskService: TaskService) { }
+  constructor(private readonly taskService: TaskService) {}
 
   @HttpCode(HttpStatus.OK)
-  @Get()
+  @ApiConsumes("application/json")
+  @ApiNotFoundResponse({ description: NO_ENTITY_FOUND })
+  @ApiForbiddenResponse({ description: "UNAUTHORIZED_REQUEST" })
+  @ApiUnprocessableEntityResponse({ description: "BAD_REQUEST" })
+  @ApiInternalServerErrorResponse({ description: INTERNAL_SERVER_ERROR })
+  @ApiOkResponse({
+    description: "list retuned successfully",
+    type: [listResponseDto],
+  })
   @UseGuards(AuthGuard)
+  @Get()
   async findAll(): Promise<Task[]> {
     return this.taskService.findAll();
   }
 
   @HttpCode(HttpStatus.CREATED)
-  @Post()
+  @ApiConsumes("application/json")
+  @ApiNotFoundResponse({ description: NO_ENTITY_FOUND })
+  @ApiForbiddenResponse({ description: "UNAUTHORIZED_REQUEST" })
+  @ApiUnprocessableEntityResponse({ description: "BAD_REQUEST" })
+  @ApiInternalServerErrorResponse({ description: INTERNAL_SERVER_ERROR })
+  @ApiCreatedResponse({
+    description: "task created",
+    type: listResponseDto,
+  })
+  // @UseInterceptors(new TaskInterceptor())
   @UseGuards(AuthGuard)
+  @Post()
   async craeteTask(@Body() payload: CreateTaskDto) {
     return this.taskService.create(payload);
   }
@@ -26,18 +91,16 @@ export class TaskController {
   @UseGuards(AuthGuard)
   @HttpCode(HttpStatus.OK)
   async updateTask(
-    @Param("id") id: number,
-    @Body() payload: CreateTaskDto,
+    @Param() param: TaskByIdDto,
+    @Body() payload: CreateTaskDto
   ) {
-    return this.taskService.updateTask(Number(id), payload);
+    return this.taskService.updateTask(param.id, payload);
   }
 
   @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(":id")
   @UseGuards(AuthGuard)
-  async deleteTask(
-    @Param("id") id: number,
-  ) {
-    return this.taskService.deleteTask(Number(id));
+  async deleteTask(@Param() param: TaskByIdDto) {
+    return this.taskService.deleteTask(param.id);
   }
 }

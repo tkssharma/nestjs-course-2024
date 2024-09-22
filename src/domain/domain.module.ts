@@ -2,9 +2,10 @@ import { MiddlewareConsumer, Module, RequestMethod } from "@nestjs/common";
 import { TaskModule } from "./task/task.module";
 import { AuthMiddleware } from "../core/middleware/auth.middleware";
 import { RouteInfo } from "@nestjs/common/interfaces";
+import { UserModule } from "./user/user.module";
 
 @Module({
-  imports: [TaskModule],
+  imports: [TaskModule, UserModule],
   controllers: [],
   providers: [],
 })

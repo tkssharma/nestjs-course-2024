@@ -1,7 +1,6 @@
 import { ApiProperty, ApiResponseProperty } from "@nestjs/swagger";
 import {
   IsDefined,
-  IsEmail,
   IsNumber,
   IsOptional,
   IsString,
@@ -46,17 +45,6 @@ export class CreateTaskDto {
   })
   @IsOptional()
   id?: number;
-}
-
-export class TaskQueryParamDto {
-
-  @ApiProperty({
-    name: "email",
-    required: true,
-    example: "ok@gmai.com",
-  })
-  @IsEmail()
-  email: string;
 }
 
 export class listResponseDto {

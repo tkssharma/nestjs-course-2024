@@ -8,14 +8,12 @@ import {
   Param,
   Post,
   Put,
-  Query,
   UseGuards,
   UsePipes,
   ValidationPipe,
 } from "@nestjs/common";
-import { TaskService } from "./task.service";
-import { Task } from "./task.model";
-import { CreateTaskDto, listResponseDto, TaskByIdDto, TaskQueryParamDto } from "./task.dto";
+import { UserService } from "./user.service";
+import { CreateTaskDto, listResponseDto, TaskByIdDto } from "./user.dto";
 import { AuthGuard } from "src/core/guards/auth.guard";
 import {
   ApiBearerAuth,
@@ -29,13 +27,13 @@ import {
   ApiUnprocessableEntityResponse,
 } from "@nestjs/swagger";
 import { NO_ENTITY_FOUND, INTERNAL_SERVER_ERROR } from "../../app.constants";
-import { EmailValidationPipe } from "../../core/pipes/custom.pipe";
+import { User } from "./user.model";
 
 // swagger tags
 
 @ApiBearerAuth("authorization")
 // @UseInterceptors(new TaskInterceptor())
-@ApiTags("tasks apis ")
+@ApiTags("users apis ")
 @UsePipes(
   new ValidationPipe({
     whitelist: true,
@@ -45,9 +43,9 @@ import { EmailValidationPipe } from "../../core/pipes/custom.pipe";
     },
   })
 )
-@Controller("/api/v1/tasks")
-export class TaskController {
-  constructor(private readonly taskService: TaskService) { }
+@Controller("/api/v1/users")
+export class UserController {
+  constructor(private readonly userService: UserService) { }
 
   @HttpCode(HttpStatus.OK)
   @ApiConsumes("application/json")
@@ -59,13 +57,9 @@ export class TaskController {
     description: "list retuned successfully",
     type: [listResponseDto],
   })
-  @UseGuards(AuthGuard)
   @Get()
-  async findAll(
-    // @Query() param: TaskQueryParamDto,
-    // @Query('email', EmailValidationPipe) email: string
-  ): Promise<Task[]> {
-    return this.taskService.findAll();
+  async findAll(): Promise<User[]> {
+    return this.userService.findAll();
   }
 
   @HttpCode(HttpStatus.CREATED)
@@ -79,34 +73,18 @@ export class TaskController {
     type: listResponseDto,
   })
   // @UseInterceptors(new TaskInterceptor())
-  @UseGuards(AuthGuard)
   @Post()
   async craeteTask(@Body() payload: CreateTaskDto) {
-    return this.taskService.create(payload);
-  }
-
-  @Put(":id")
-  @UseGuards(AuthGuard)
-  @HttpCode(HttpStatus.OK)
-  async updateTask(
-    @Param() param: TaskByIdDto,
-    @Body() payload: CreateTaskDto
-  ) {
-    return this.taskService.updateTask(param.id, payload);
-  }
-
-  @HttpCode(HttpStatus.NO_CONTENT)
-  @Delete(":id")
-  @UseGuards(AuthGuard)
-  async deleteTask(@Param() param: TaskByIdDto) {
-    return this.taskService.deleteTask(param.id);
+    return this.userService.create(payload);
   }
 }
-
-
 /*
-ParseIntPipe: Converts a string to an integer.
-ParseFloatPipe: Converts a string to a floating-point number.
-ValidationPipe: Performs automatic data validation based on decorators such as @Body(), @Query(), and more.
+
+@Param('id', ParseIntPipe) id: number // built in pipes 
+Body() createItemDto: CreateItemDto // class validator 
+
+
+
+
 
 */

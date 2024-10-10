@@ -5,6 +5,7 @@ import {
   IsNumber,
   IsOptional,
   IsString,
+  IsUUID,
   MinLength,
 } from 'class-validator';
 
@@ -45,6 +46,7 @@ export class CreateTaskDto {
     example: 'uuid',
   })
   @IsOptional()
+  @IsUUID()
   id?: number;
 }
 

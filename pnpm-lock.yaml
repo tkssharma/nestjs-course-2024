@@ -66,7 +66,7 @@ importers:
         specifier: ^4.5.4
         version: 4.9.5
 
-  apps/nestjs-advance-auth-app-02:
+  apps/day-10-nestjs-core-fundamentals:
     dependencies:
       "@nestjs/common":
         specifier: ^10.0.0
@@ -140,7 +140,7 @@ importers:
         version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
       jest:
         specifier: ^29.5.0
-        version: 29.7.0(@types/node@20.16.11)(ts-node@10.9.2)
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
       prettier:
         specifier: ^3.0.0
         version: 3.3.3
@@ -152,7 +152,7 @@ importers:
         version: 7.0.0
       ts-jest:
         specifier: ^29.1.0
-        version: 29.2.5(@babel/core@7.25.8)(jest@29.7.0)(typescript@5.6.3)
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
       ts-loader:
         specifier: ^9.4.3
         version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
@@ -166,7 +166,807 @@ importers:
         specifier: ^5.1.3
         version: 5.6.3
 
-  apps/nestjs-advance-dto-01:
+  apps/day-11-middleware-guards:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-12-nestjs-swagger:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-13-nestjs-request-validation:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-15-nestjs-exception-hanling:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-16-nestjs-interceptors:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-18-nestjs-env:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-19-nestjs-scope:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-20-nestjs-custom-providers:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.21.1)
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-24-nestjs-validation-dto:
     dependencies:
       "@nestjs/common":
         specifier: ^10.0.0
@@ -231,7 +1031,7 @@ importers:
         version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
       jest:
         specifier: ^29.5.0
-        version: 29.7.0(@types/node@20.16.11)(ts-node@10.9.2)
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
       prettier:
         specifier: ^3.0.0
         version: 3.3.3
@@ -243,7 +1043,7 @@ importers:
         version: 7.0.0
       ts-jest:
         specifier: ^29.1.0
-        version: 29.2.5(@babel/core@7.25.8)(jest@29.7.0)(typescript@5.6.3)
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
       ts-loader:
         specifier: ^9.4.3
         version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
@@ -257,7 +1057,7 @@ importers:
         specifier: ^5.1.3
         version: 5.6.3
 
-  apps/nestjs-advance-swagger-03:
+  apps/day-25-nestjs-swagger-basic-auth:
     dependencies:
       "@nestjs/common":
         specifier: ^10.0.0
@@ -328,7 +1128,7 @@ importers:
         version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
       jest:
         specifier: ^29.5.0
-        version: 29.7.0(@types/node@20.16.11)(ts-node@10.9.2)
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
       prettier:
         specifier: ^3.0.0
         version: 3.3.3
@@ -340,7 +1140,7 @@ importers:
         version: 7.0.0
       ts-jest:
         specifier: ^29.1.0
-        version: 29.2.5(@babel/core@7.25.8)(jest@29.7.0)(typescript@5.6.3)
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
       ts-loader:
         specifier: ^9.4.3
         version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
@@ -354,7 +1154,398 @@ importers:
         specifier: ^5.1.3
         version: 5.6.3
 
-  apps/nestjs-async-winston-logger-06:
+  apps/day-26-nestjs-advance-swagger:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      express-basic-auth:
+        specifier: ^1.2.1
+        version: 1.2.1
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-28-nestjs-pagination-filter-search:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      express-basic-auth:
+        specifier: ^1.2.1
+        version: 1.2.1
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-29-nestjs-custom-filter:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      express-basic-auth:
+        specifier: ^1.2.1
+        version: 1.2.1
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-30-nestjs-config-mgmt:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^10.0.0
+        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/config":
+        specifier: ^3.2.3
+        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
+      "@nestjs/swagger":
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
+      class-transformer:
+        specifier: ^0.2.3
+        version: 0.2.3
+      class-validator:
+        specifier: ^0.12.0-rc.0
+        version: 0.12.2
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      express-basic-auth:
+        specifier: ^1.2.1
+        version: 1.2.1
+      reflect-metadata:
+        specifier: ^0.2.0
+        version: 0.2.2
+      rxjs:
+        specifier: ^7.8.1
+        version: 7.8.1
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^10.0.0
+        version: 10.4.5
+      "@nestjs/schematics":
+        specifier: ^10.0.0
+        version: 10.1.4(typescript@5.6.3)
+      "@nestjs/testing":
+        specifier: ^10.0.0
+        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
+      "@types/express":
+        specifier: ^4.17.17
+        version: 4.17.21
+      "@types/jest":
+        specifier: ^29.5.2
+        version: 29.5.13
+      "@types/node":
+        specifier: ^20.3.1
+        version: 20.16.11
+      "@types/supertest":
+        specifier: ^6.0.0
+        version: 6.0.2
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^8.0.0
+        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
+      "@typescript-eslint/parser":
+        specifier: ^8.0.0
+        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint:
+        specifier: ^8.42.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.0.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^5.0.0
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
+      jest:
+        specifier: ^29.5.0
+        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^3.0.0
+        version: 3.3.3
+      source-map-support:
+        specifier: ^0.5.21
+        version: 0.5.21
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      ts-jest:
+        specifier: ^29.1.0
+        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
+      ts-loader:
+        specifier: ^9.4.3
+        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
+      tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^5.1.3
+        version: 5.6.3
+
+  apps/day-31-nestjs-logger:
     dependencies:
       "@nestjs/common":
         specifier: ^9.0.0
@@ -392,9 +1583,139 @@ importers:
       helmet:
         specifier: ^6.1.5
         version: 6.2.0
-      nest-winston:
-        specifier: ^1.9.7
-        version: 1.9.7(@nestjs/common@9.4.3)(winston@3.15.0)
+      nestjs-pino:
+        specifier: ^4.1.0
+        version: 4.1.0(@nestjs/common@9.4.3)(pino-http@10.3.0)
+      pg:
+        specifier: ^8.10.0
+        version: 8.13.0
+      pino-http:
+        specifier: ^10.3.0
+        version: 10.3.0
+      reflect-metadata:
+        specifier: ^0.1.13
+        version: 0.1.14
+      rxjs:
+        specifier: ^7.2.0
+        version: 7.8.1
+      swagger-ui-express:
+        specifier: ^4.6.2
+        version: 4.6.3(express@4.21.1)
+      typeorm:
+        specifier: ^0.3.12
+        version: 0.3.20(pg@8.13.0)(ts-node@10.9.2)
+      uuid:
+        specifier: ^8.3.2
+        version: 8.3.2
+    devDependencies:
+      "@nestjs/cli":
+        specifier: ^9.0.0
+        version: 9.5.0
+      "@nestjs/event-emitter":
+        specifier: ^2.0.0
+        version: 2.0.4(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)
+      "@nestjs/schematics":
+        specifier: ^9.0.0
+        version: 9.2.0(chokidar@3.5.3)(typescript@4.9.5)
+      "@nestjs/terminus":
+        specifier: ^9.0.0
+        version: 9.2.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(@nestjs/typeorm@9.0.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)(typeorm@0.3.20)
+      "@nestjs/testing":
+        specifier: ^9.0.0
+        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(@nestjs/platform-express@9.4.3)
+      "@types/express":
+        specifier: ^4.17.13
+        version: 4.17.21
+      "@types/jest":
+        specifier: 29.5.0
+        version: 29.5.0
+      "@types/node":
+        specifier: 18.15.11
+        version: 18.15.11
+      "@types/supertest":
+        specifier: ^2.0.11
+        version: 2.0.16
+      "@typescript-eslint/eslint-plugin":
+        specifier: ^5.0.0
+        version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.1)(typescript@4.9.5)
+      "@typescript-eslint/parser":
+        specifier: ^5.0.0
+        version: 5.62.0(eslint@8.57.1)(typescript@4.9.5)
+      eslint:
+        specifier: ^8.0.1
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^8.3.0
+        version: 8.10.0(eslint@8.57.1)
+      eslint-plugin-prettier:
+        specifier: ^4.0.0
+        version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.57.1)(prettier@2.8.8)
+      jest:
+        specifier: 29.5.0
+        version: 29.5.0(@types/node@18.15.11)(ts-node@10.9.2)
+      prettier:
+        specifier: ^2.3.2
+        version: 2.8.8
+      source-map-support:
+        specifier: ^0.5.20
+        version: 0.5.21
+      supertest:
+        specifier: ^6.1.3
+        version: 6.3.4
+      ts-jest:
+        specifier: 29.0.5
+        version: 29.0.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@4.9.5)
+      ts-loader:
+        specifier: ^9.2.3
+        version: 9.5.1(typescript@4.9.5)(webpack@5.95.0)
+      ts-node:
+        specifier: ^10.0.0
+        version: 10.9.2(@types/node@18.15.11)(typescript@4.9.5)
+      tsconfig-paths:
+        specifier: 4.2.0
+        version: 4.2.0
+      typescript:
+        specifier: ^4.7.4
+        version: 4.9.5
+
+  apps/day-32-nestjs-winston-pino-logger:
+    dependencies:
+      "@nestjs/common":
+        specifier: ^9.0.0
+        version: 9.4.3(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
+      "@nestjs/core":
+        specifier: ^9.0.0
+        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/platform-express@9.4.3)(reflect-metadata@0.1.14)(rxjs@7.8.1)
+      "@nestjs/platform-express":
+        specifier: ^9.0.0
+        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)
+      "@nestjs/swagger":
+        specifier: ^7.1.1
+        version: 7.4.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)
+      "@nestjs/typeorm":
+        specifier: ^9.0.1
+        version: 9.0.1(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(reflect-metadata@0.1.14)(rxjs@7.8.1)(typeorm@0.3.20)
+      "@types/uuid":
+        specifier: ^8.3.4
+        version: 8.3.4
+      class-transformer:
+        specifier: ^0.5.1
+        version: 0.5.1
+      class-validator:
+        specifier: ^0.14.0
+        version: 0.14.1
+      debug:
+        specifier: ^4.3.7
+        version: 4.3.7
+      express:
+        specifier: ^4.18.2
+        version: 4.21.1
+      express-basic-auth:
+        specifier: ^1.2.1
+        version: 1.2.1
+      helmet:
+        specifier: ^6.1.5
+        version: 6.2.0
       nestjs-pino:
         specifier: ^4.1.0
         version: 4.1.0(@nestjs/common@9.4.3)(pino-http@10.3.0)
@@ -496,107 +1817,7 @@ importers:
         specifier: ^4.7.4
         version: 4.9.5
 
-  apps/nestjs-config-mgmt-03.1:
-    dependencies:
-      "@nestjs/common":
-        specifier: ^10.0.0
-        version: 10.4.4(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)(rxjs@7.8.1)
-      "@nestjs/config":
-        specifier: ^3.2.3
-        version: 3.2.3(@nestjs/common@10.4.4)(rxjs@7.8.1)
-      "@nestjs/core":
-        specifier: ^10.0.0
-        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/platform-express@10.4.4)(reflect-metadata@0.2.2)(rxjs@7.8.1)
-      "@nestjs/platform-express":
-        specifier: ^10.0.0
-        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)
-      "@nestjs/swagger":
-        specifier: ^7.4.2
-        version: 7.4.2(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(class-transformer@0.2.3)(class-validator@0.12.2)(reflect-metadata@0.2.2)
-      class-transformer:
-        specifier: ^0.2.3
-        version: 0.2.3
-      class-validator:
-        specifier: ^0.12.0-rc.0
-        version: 0.12.2
-      dotenv:
-        specifier: ^16.4.5
-        version: 16.4.5
-      express-basic-auth:
-        specifier: ^1.2.1
-        version: 1.2.1
-      reflect-metadata:
-        specifier: ^0.2.0
-        version: 0.2.2
-      rxjs:
-        specifier: ^7.8.1
-        version: 7.8.1
-    devDependencies:
-      "@nestjs/cli":
-        specifier: ^10.0.0
-        version: 10.4.5
-      "@nestjs/schematics":
-        specifier: ^10.0.0
-        version: 10.1.4(typescript@5.6.3)
-      "@nestjs/testing":
-        specifier: ^10.0.0
-        version: 10.4.4(@nestjs/common@10.4.4)(@nestjs/core@10.4.4)(@nestjs/platform-express@10.4.4)
-      "@types/express":
-        specifier: ^4.17.17
-        version: 4.17.21
-      "@types/jest":
-        specifier: ^29.5.2
-        version: 29.5.13
-      "@types/node":
-        specifier: ^20.3.1
-        version: 20.16.11
-      "@types/supertest":
-        specifier: ^6.0.0
-        version: 6.0.2
-      "@typescript-eslint/eslint-plugin":
-        specifier: ^8.0.0
-        version: 8.8.1(@typescript-eslint/parser@8.8.1)(eslint@8.57.1)(typescript@5.6.3)
-      "@typescript-eslint/parser":
-        specifier: ^8.0.0
-        version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
-      eslint:
-        specifier: ^8.42.0
-        version: 8.57.1
-      eslint-config-prettier:
-        specifier: ^9.0.0
-        version: 9.1.0(eslint@8.57.1)
-      eslint-plugin-prettier:
-        specifier: ^5.0.0
-        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.1)(prettier@3.3.3)
-      jest:
-        specifier: ^29.5.0
-        version: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
-      prettier:
-        specifier: ^3.0.0
-        version: 3.3.3
-      source-map-support:
-        specifier: ^0.5.21
-        version: 0.5.21
-      supertest:
-        specifier: ^7.0.0
-        version: 7.0.0
-      ts-jest:
-        specifier: ^29.1.0
-        version: 29.2.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@5.6.3)
-      ts-loader:
-        specifier: ^9.4.3
-        version: 9.5.1(typescript@5.6.3)(webpack@5.95.0)
-      ts-node:
-        specifier: ^10.9.1
-        version: 10.9.2(@types/node@20.16.11)(typescript@5.6.3)
-      tsconfig-paths:
-        specifier: ^4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: ^5.1.3
-        version: 5.6.3
-
-  apps/nestjs-logger-04:
+  apps/day-33-nestjs-async-winston:
     dependencies:
       "@nestjs/common":
         specifier: ^9.0.0
@@ -634,139 +1855,9 @@ importers:
       helmet:
         specifier: ^6.1.5
         version: 6.2.0
-      nestjs-pino:
-        specifier: ^4.1.0
-        version: 4.1.0(@nestjs/common@9.4.3)(pino-http@10.3.0)
-      pg:
-        specifier: ^8.10.0
-        version: 8.13.0
-      pino-http:
-        specifier: ^10.3.0
-        version: 10.3.0
-      reflect-metadata:
-        specifier: ^0.1.13
-        version: 0.1.14
-      rxjs:
-        specifier: ^7.2.0
-        version: 7.8.1
-      swagger-ui-express:
-        specifier: ^4.6.2
-        version: 4.6.3(express@4.21.1)
-      typeorm:
-        specifier: ^0.3.12
-        version: 0.3.20(pg@8.13.0)(ts-node@10.9.2)
-      uuid:
-        specifier: ^8.3.2
-        version: 8.3.2
-    devDependencies:
-      "@nestjs/cli":
-        specifier: ^9.0.0
-        version: 9.5.0
-      "@nestjs/event-emitter":
-        specifier: ^2.0.0
-        version: 2.0.4(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)
-      "@nestjs/schematics":
-        specifier: ^9.0.0
-        version: 9.2.0(chokidar@3.5.3)(typescript@4.9.5)
-      "@nestjs/terminus":
-        specifier: ^9.0.0
-        version: 9.2.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(@nestjs/typeorm@9.0.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)(typeorm@0.3.20)
-      "@nestjs/testing":
-        specifier: ^9.0.0
-        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(@nestjs/platform-express@9.4.3)
-      "@types/express":
-        specifier: ^4.17.13
-        version: 4.17.21
-      "@types/jest":
-        specifier: 29.5.0
-        version: 29.5.0
-      "@types/node":
-        specifier: 18.15.11
-        version: 18.15.11
-      "@types/supertest":
-        specifier: ^2.0.11
-        version: 2.0.16
-      "@typescript-eslint/eslint-plugin":
-        specifier: ^5.0.0
-        version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.1)(typescript@4.9.5)
-      "@typescript-eslint/parser":
-        specifier: ^5.0.0
-        version: 5.62.0(eslint@8.57.1)(typescript@4.9.5)
-      eslint:
-        specifier: ^8.0.1
-        version: 8.57.1
-      eslint-config-prettier:
-        specifier: ^8.3.0
-        version: 8.10.0(eslint@8.57.1)
-      eslint-plugin-prettier:
-        specifier: ^4.0.0
-        version: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.57.1)(prettier@2.8.8)
-      jest:
-        specifier: 29.5.0
-        version: 29.5.0(@types/node@18.15.11)(ts-node@10.9.2)
-      prettier:
-        specifier: ^2.3.2
-        version: 2.8.8
-      source-map-support:
-        specifier: ^0.5.20
-        version: 0.5.21
-      supertest:
-        specifier: ^6.1.3
-        version: 6.3.4
-      ts-jest:
-        specifier: 29.0.5
-        version: 29.0.5(@babel/core@7.25.8)(jest@29.5.0)(typescript@4.9.5)
-      ts-loader:
-        specifier: ^9.2.3
-        version: 9.5.1(typescript@4.9.5)(webpack@5.95.0)
-      ts-node:
-        specifier: ^10.0.0
-        version: 10.9.2(@types/node@18.15.11)(typescript@4.9.5)
-      tsconfig-paths:
-        specifier: 4.2.0
-        version: 4.2.0
-      typescript:
-        specifier: ^4.7.4
-        version: 4.9.5
-
-  apps/nestjs-winston-logger-05:
-    dependencies:
-      "@nestjs/common":
-        specifier: ^9.0.0
-        version: 9.4.3(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
-      "@nestjs/core":
-        specifier: ^9.0.0
-        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/platform-express@9.4.3)(reflect-metadata@0.1.14)(rxjs@7.8.1)
-      "@nestjs/platform-express":
-        specifier: ^9.0.0
-        version: 9.4.3(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)
-      "@nestjs/swagger":
-        specifier: ^7.1.1
-        version: 7.4.2(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)
-      "@nestjs/typeorm":
-        specifier: ^9.0.1
-        version: 9.0.1(@nestjs/common@9.4.3)(@nestjs/core@9.4.3)(reflect-metadata@0.1.14)(rxjs@7.8.1)(typeorm@0.3.20)
-      "@types/uuid":
-        specifier: ^8.3.4
-        version: 8.3.4
-      class-transformer:
-        specifier: ^0.5.1
-        version: 0.5.1
-      class-validator:
-        specifier: ^0.14.0
-        version: 0.14.1
-      debug:
-        specifier: ^4.3.7
-        version: 4.3.7
-      express:
-        specifier: ^4.18.2
-        version: 4.21.1
-      express-basic-auth:
-        specifier: ^1.2.1
-        version: 1.2.1
-      helmet:
-        specifier: ^6.1.5
-        version: 6.2.0
+      nest-winston:
+        specifier: ^1.9.7
+        version: 1.9.7(@nestjs/common@9.4.3)(winston@3.15.0)
       nestjs-pino:
         specifier: ^4.1.0
         version: 4.1.0(@nestjs/common@9.4.3)(pino-http@10.3.0)
@@ -11206,30 +12297,6 @@ packages:
       - ts-node
     dev: true
 
-  /jest@29.7.0(@types/node@20.16.11)(ts-node@10.9.2):
-    resolution:
-      {
-        integrity: sha512-NIy3oAFp9shda19hy4HK0HRTWKtPJmGdnvywu01nOqNC2vZg+Z+fvJDxpMQA88eb2I9EcafcdjYgsDthnYTvGw==,
-      }
-    engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
-    hasBin: true
-    peerDependencies:
-      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
-    peerDependenciesMeta:
-      node-notifier:
-        optional: true
-    dependencies:
-      "@jest/core": 29.7.0(ts-node@10.9.2)
-      "@jest/types": 29.6.3
-      import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@20.16.11)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - "@types/node"
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
-    dev: true
-
   /jiti@1.21.6:
     resolution:
       {
@@ -15014,47 +16081,6 @@ packages:
       ejs: 3.1.10
       fast-json-stable-stringify: 2.1.0
       jest: 29.5.0(@types/node@20.16.11)(ts-node@10.9.2)
-      jest-util: 29.7.0
-      json5: 2.2.3
-      lodash.memoize: 4.1.2
-      make-error: 1.3.6
-      semver: 7.6.3
-      typescript: 5.6.3
-      yargs-parser: 21.1.1
-    dev: true
-
-  /ts-jest@29.2.5(@babel/core@7.25.8)(jest@29.7.0)(typescript@5.6.3):
-    resolution:
-      {
-        integrity: sha512-KD8zB2aAZrcKIdGk4OwpJggeLcH1FgrICqDSROWqlnJXGCXK4Mn6FcdK2B6670Xr73lHMG1kHw8R87A0ecZ+vA==,
-      }
-    engines: { node: ^14.15.0 || ^16.10.0 || ^18.0.0 || >=20.0.0 }
-    hasBin: true
-    peerDependencies:
-      "@babel/core": ">=7.0.0-beta.0 <8"
-      "@jest/transform": ^29.0.0
-      "@jest/types": ^29.0.0
-      babel-jest: ^29.0.0
-      esbuild: "*"
-      jest: ^29.0.0
-      typescript: ">=4.3 <6"
-    peerDependenciesMeta:
-      "@babel/core":
-        optional: true
-      "@jest/transform":
-        optional: true
-      "@jest/types":
-        optional: true
-      babel-jest:
-        optional: true
-      esbuild:
-        optional: true
-    dependencies:
-      "@babel/core": 7.25.8
-      bs-logger: 0.2.6
-      ejs: 3.1.10
-      fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@20.16.11)(ts-node@10.9.2)
       jest-util: 29.7.0
       json5: 2.2.3
       lodash.memoize: 4.1.2

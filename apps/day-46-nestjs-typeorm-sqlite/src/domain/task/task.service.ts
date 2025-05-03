@@ -1,36 +1,28 @@
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { Task } from './task.entity';
+const express = require('express');
+const app = express();
 
-@Injectable()
-export class TasksService {
-  constructor(
-    @InjectRepository(Task)
-    private readonly taskRepository: Repository<Task>,
-  ) {}
+// Middleware to parse JSON
+app.use(express.json());
 
-  async findAll(): Promise<Task[]> {
-    return this.taskRepository.find();
-  }
+// GET route
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
-  async findOne(id: number): Promise<Task> {
-    return this.taskRepository.findOne({ where: { id } });
-  }
+// POST route
+app.post('/api/data', (req, res) => {
+  const { name } = req.body;
+  res.json({ message: `Hello, ${name}!` });
+});
 
-  async create(title: string): Promise<Task> {
-    const task = this.taskRepository.create({ title });
-    return this.taskRepository.save(task);
-  }
+// Route with params
+app.get('/api/user/:id', (req, res) => {
+  const userId = req.params.id;
+  res.json({ userId });
+});
 
-  async update(id: number, completed: boolean): Promise<Task> {
-    const task = await this.findOne(id);
-    if (!task) return null;
-    task.completed = completed;
-    return this.taskRepository.save(task);
-  }
-
-  async delete(id: number): Promise<void> {
-    await this.taskRepository.delete(id);
-  }
-}
+// Start server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});

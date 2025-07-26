@@ -1,129 +1,198 @@
+# 🧱 Mastering NestJS – A Comprehensive Hands-on Guide
 
+![NestJS Logo](./nestjs.png)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1724805067661/67f02611-e0ff-4ea0-beaf-0f7d9e7fde39.jpeg)
+Welcome to the **Mastering NestJS** course repository. This course covers everything from the basics of NestJS and its core concepts to advanced integrations like database ORMs, authentication, and real-world project setups.
 
-### [](#heading-00-introduction "")00 Introduction
+---
 
-Why Nestjs
+## 📚 Course Modules Overview
 
-*   nestjs and express side by side
-*   nestjs IOC and Typescript
-*   Nestjs decorators
-*   NestJS with Integrations
-*   Nestjs why should i choose it !
+## 📆 Course Schedule
 
-### [](#heading-controller-and-services-building-blocks "")controller and services (building blocks)
+| Module | Title                                        | Topics Covered                                               |
+| ------ | -------------------------------------------- | ------------------------------------------------------------ |
+| 00     | **Introduction**                             | Why NestJS, Architecture, Decorators, Integrations           |
+| 01     | **Controllers & Services**                   | NestJS building blocks, CRUD APIs, Task module               |
+| 02     | **Validation & Pipes**                       | `ValidationPipe`, DTOs, error handling                       |
+| 03     | **Exception Filters & Middleware**           | Filters, Middleware, Guards, Interceptors, Custom Decorators |
+| 04     | **Demo App with All Concepts**               | Student CRUD APIs, in-memory DB, Swagger, Modular Code       |
+| 05     | **Persistence with TypeORM**                 | PostgreSQL setup with Docker, Entities, Repositories         |
+| 06     | **Other ORMs and Migrations**                | Prisma, Sequelize, Mongoose overview                         |
+| 07     | **Real APIs with Prisma/Mongoose/Sequelize** | Food Delivery APIs using various ORMs                        |
+| 08     | **Authentication & Authorization**           | Cookie, Session, JWT-based auth, Guards, Passport.js         |
+| 09     | **Database Relationships**                   | One-to-Many, Many-to-Many with TypeORM                       |
 
-*   Installing Node.js and Yarn
-*   Installing the NestJS CLI
-*   (Optional) Installing VSCode and Extensions
-*   Creating our project via the NestJS CLI
-*   Creating a Tasks Module
-*   Creating at Tasks Controller
-*   Creating a Tasks Service
-*   Defining a Task Model
-*   Feature Creating a Task (Part - Controller)
-*   Feature Creating a Task (Part - Service)
-*   Implementing CreateTaskDto
-*   Feature Getting a Task by ID
-*   CRUD APIs
-*   Feature Searching and Filtering
+---
 
-### [](#heading-02-validation-and-pipes-building-blocks "")02 validation and pipes (building blocks)
+## 🚀 Advanced Topics
 
-*   ValidationPipe Creating a Task
-*   Error Handling Deleting a non-existing Task-
-*   Validation Update Task Status
-*   Challenge Validating Task Filtering and Search
+| Module | Title                               | Topics Covered                                                                                     |
+| ------ | ----------------------------------- | -------------------------------------------------------------------------------------------------- |
+| 10     | **NestJS Testing**                  | Unit testing services, controllers, e2e tests using `@nestjs/testing`, mocking dependencies        |
+| 11     | **NestJS Microservices**            | Message-based architecture, TCP transport, Redis/NATS brokers, request-response, pub/sub patterns  |
+| 12     | **NestJS Microservices Demo**       | Real-world microservice setup, producer/consumer model, distributed task runner                    |
+| 13     | **NestJS with GraphQL**             | Introduction to GraphQL, code-first and schema-first, resolvers, queries, mutations, subscriptions |
+| 14     | **NestJS with External Interfaces** | Calling third-party APIs, Axios, SOAP, REST integrations, retry strategies, circuit breakers       |
+| 15     | **NestJS in a Monorepo**            | Managing multiple apps/libs with Turborepo, PNPM workspaces, shared modules, CI/CD setup           |
+| 16     | **NestJS Advanced Concepts**        | Reflection, metadata, custom modules, dynamic modules, lifecycle hooks, context-based providers    |
 
-### [](#heading-03-exception-filters-and-middleware-all-building-blocks "")03 exception filters and middleware (all building blocks)
+---
 
-*   Controllers with task api
-*   Providers with task crud apis
-*   Modules with task crud apis
-*   Middleware with task crud apis
-*   Exception filters with task crud apis
-*   Pipes with task crud apis
-*   Guards with task crud apis
-*   Interceptors with task crud apis
-*   Custom decorators with task crud apis
-*   create middleware with task crud apis
-*   apply middleware on routes
-*   exclude routes from middleware
-*   Validating Task Filtering and Search
+### 📦 00 - Introduction to NestJS
 
-### [](#heading-04-apply-all-learning-in-demo "")04 Apply all Learning in Demo
+- Why choose NestJS over Express?
+- Understanding NestJS architecture (IOC, DI, Decorators)
+- Getting started with TypeScript
+- Exploring NestJS integrations
 
-*   Create students apis
-*   Use IN-memory database
-*   CRUD APIs with swagger specs
-*   Payload validation using DTO Validation
-*   Apply Middleware on Private Routes
-*   Create a Mock Login APIs with Token in Auth Header
-*   Apply Guards on Private Route
-*   Add exception Filter on Response Payload
-*   Custom payload data validation using class validator
-*   Adding services and dao layer
-*   How to import export and share modules
-*   Code structure of any basic nestjs application
-*   Creating routing using controllers
-*   Using swagger tags to exose api specs
-*   Using REST API client to test apis
-*   Creating Modules and share Modules
-*   Understanding DI Framework
-*   Understand IOC Container
+---
 
-### [](#heading-05-data-store-with-orm "")05 Data store with ORM
+### 🧱 01 - Controllers and Services (Building Blocks)
 
-- Introduction to Persistence 
-- Installing Docker and pgAdmin
-- Running PostgreSQL via Docker
-- Setting up pgAdmin
-- Creating a Database using pgAdmin 
-- Introduction to TypeORM Setting up a Database Connection
-- Creating a Task Entity Active Record VS Data Mapper Patterns
-- Creaing a Tasks Repository Refactoring for Tasks Service 
-- Persistence Getting a Task by ID Persistence
-- Creating a Task (Challenge) Persistence Deleting a Task (Solution)
-- Persistence Deleting a Task Persistence Update Task Status 
-- Small Change Needed Persistence Getting All Tasks
+- Installing Node.js and Yarn
+- Setting up the NestJS CLI
+- (Optional) Setting up VSCode + Extensions
+- Creating the project with CLI
+- Understanding Modules, Controllers, and Services
+- Implementing a Tasks Module:
+  - Tasks Controller
+  - Tasks Service
+  - Task Model & DTOs
+- CRUD APIs for Tasks
+- Task Filtering and Searching
 
-### [](#heading-06-different-orm-and-migrations "")06 Different ORM and Migrations
+---
 
-*   Food Delivery APIs with different ORM
-*   Prisma
-*   Sequelize
-*   Mongoose
-*   TypeORM
+### 🔍 02 - Validation and Pipes
 
-### [](#heading-07-data-store-with-prismamongoosesequelize "")07 Data store with Prisma/Mongoose/Sequelize
+- Using `ValidationPipe` for CreateTask DTO
+- Handling Errors (e.g., deleting non-existing tasks)
+- Updating Task Status with Validation
+- Challenge: Validate Task Filtering/Search Inputs
 
-Food Delivery APIs with Prisma Prisma and Migration Creating Prism Models Building APIs with Prisma Building Controller and services Building Prisma schema with postgres Building APIs with Prisma client apis
+---
 
-### [](#heading-08-intro-to-authentication-and-authorization "")08 Intro to Authentication and Authorization
+### ⚙️ 03 - Exception Filters, Middleware, and Core Concepts
 
-*   Cookies based auth
-*   session based auth
-*   jwt token based auth
+- Full CRUD API with Tasks
+- Deep dive into:
+  - Controllers / Providers / Modules
+  - Middleware (creating, applying, excluding routes)
+  - Exception Filters
+  - Pipes and Guards
+  - Interceptors
+  - Custom Decorators
 
-- Setting up AuthModule,
-- User Entity and User Repository Feature 
-- Signing Up Validation 
-- Credentials and Password Strength 
-- Error Handling Username Conflicts 
-- Securely Storing Passwords Password 
-- Hashing With Bcrypt Feature Signing In 
-- Setting up the JWT Module and Passport.js 
-- Signing a JWT Token on Sign In (Authentication) 
-- Implementing JWT Validation Custom 
-- Decorator Guarding the Tasks Routes
+---
 
-### [](#heading-09-database-relationship "")09 Database relationship
+### 🚀 04 - Applying All Learnings in a Demo App
 
-*   Food Delivery APIs with TypeORM
-*   Managing relationship in tables
-*   define relationships in typeorm entities
-*   build apis using typeorm
-*   add auth and authz created in above videos
-*   add middeleare and auth guards
-*   add filters and interceptors
+- Build Student Management APIs
+- Use In-Memory DB for simplicity
+- Full CRUD with Swagger Specs
+- DTO-based payload validation
+- Token-based Mock Auth APIs
+- Apply Guards, Middleware, and Exception Filters
+- Understand DAO & Service Layers
+- Real-world Code Structure
+- API Testing with Swagger and REST Clients
+- Modularization and DI framework exploration
+
+---
+
+### 🗄️ 05 - Data Store with TypeORM
+
+- Intro to Persistence Layer
+- Setting up PostgreSQL with Docker
+- Using pgAdmin to manage DB
+- Intro to TypeORM:
+  - Connecting to DB
+  - Task Entity & Repository
+  - Active Record vs Data Mapper
+- CRUD Operations with TypeORM
+- Challenge Exercises with Solutions
+
+---
+
+### 🔁 06 - Exploring Other ORMs and Migrations
+
+- Brief Introduction to:
+  - Prisma
+  - Sequelize
+  - Mongoose
+  - TypeORM
+- Compare approaches and syntax
+
+---
+
+### 🧬 07 - Real-World API with Prisma / Mongoose / Sequelize
+
+- Building Food Delivery APIs using:
+  - Prisma with Migrations
+  - MongoDB + Mongoose
+  - Sequelize for SQL databases
+- Prisma Schema & Client API
+- Modular Services and Controllers with ORM
+
+---
+
+### 🔐 08 - Authentication & Authorization in NestJS
+
+- Types of Auth:
+  - Cookies
+  - Sessions
+  - JWT (Token-based)
+- Setup `AuthModule`
+- Create User Entity + Repository
+- Signup Flow:
+  - Validation
+  - Password Strength
+  - Conflict/Error Handling
+  - Password Hashing with Bcrypt
+- Sign In:
+  - Implementing Passport.js + JWT Strategy
+  - JWT Token generation + validation
+  - Route Guards + Custom Decorators
+
+---
+
+### 🧩 09 - Database Relationships with TypeORM
+
+- Expand Food Delivery App with Relationships
+- Define `OneToMany`, `ManyToOne`, `ManyToMany`
+- NestJS APIs to interact with related tables
+- Combine with Auth, Middleware, Guards, Filters, and Interceptors
+
+---
+
+## 🛠️ Requirements
+
+- Node.js v18+
+- Yarn or npm
+- NestJS CLI
+- Docker (for database sections)
+- pgAdmin (optional)
+
+---
+
+## ▶️ Running the App
+
+```bash
+# Install dependencies
+yarn install
+
+# Start the app
+yarn start:dev
+```
+
+## 🧠 Learning Outcomes
+
+- By the end of this course, you will:
+- Understand NestJS core building blocks and architecture
+- Be proficient in creating REST & GraphQL APIs
+- Integrate multiple ORMs and databases
+- Build real-world microservices with messaging and events
+- Apply advanced patterns like Monorepo, Shared Modules, and Testing
+- Secure APIs with authentication and authorization
+- Handle middleware, guards, interceptors, filters professionally

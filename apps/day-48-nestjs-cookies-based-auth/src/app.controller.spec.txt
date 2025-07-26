@@ -1,0 +1,32 @@
+
+✅ Core Security Practices
+---------------------------
+
+🛡️ Use helmet to set secure HTTP headers
+
+🌐 Configure strict CORS settings (whitelist origins, allow credentials)
+
+🧼 Use ValidationPipe with:
+
+whitelist: true
+
+forbidNonWhitelisted: true
+
+transform: true
+
+🧁 Use cookie-parser for cookie-based auth or CSRF
+
+🔐 Enable global ThrottlerGuard for rate limiting
+
+🔑 Use @nestjs/passport and @nestjs/jwt for JWT-based authentication
+
+🎯 Implement role-based access control (RBAC) with:
+
+@Roles() decorator
+
+Custom RolesGuard
+
+🕵️ Use guards (CanActivate) to protect routes
+
+🔒 Hash passwords using bcrypt
+
